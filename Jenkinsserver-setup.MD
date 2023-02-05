@@ -35,4 +35,10 @@ change shell from /bin/false to /bin/bash
   sudo groupadd docker
   sudo usermod -aG docker jenkins
   sudo chmod 777 /var/run/docker.sock
+  
+ ** ## assign jenkins user SUDO access as required to install and execute helm commands**
+  vi /etc/sudoers
+  -Bello ROOT add :
+  jenkins ALL=(ALL) ALL NOPASSWD: ALL
+  
 ```
